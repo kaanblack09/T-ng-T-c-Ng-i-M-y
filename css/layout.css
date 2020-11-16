@@ -1,0 +1,391 @@
+/* STYLE CHO HEADER CỦA LAYOUT*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header {
+    width: 100%;
+    background-size: contain;
+}
+
+.container-header {
+    height: 90px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.5s ease;
+}
+
+
+/* style cho menu */
+
+.menu {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 15%;
+}
+
+
+/* logo của page*/
+
+.menu img {
+    margin: 0px 15px;
+    height: 100px;
+    width: 120px;
+}
+
+
+/* tab menu chức năng */
+
+.tab-menu {
+    color: #ffffff;
+    margin-left: 50px;
+    display: flex;
+}
+
+.tab-menu li {
+    font-family: var(--font-headers), serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0px 20px;
+    cursor: pointer;
+    list-style: none;
+}
+
+
+/* style khi hover vào thì có viền và đổi màu vàng */
+
+.btn1 {
+    letter-spacing: 0;
+}
+
+.btn1:hover {
+    letter-spacing: 2px;
+}
+
+.btn1::after,
+.btn1::before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#fff, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+    opacity: 0;
+}
+
+.btn1.color-yellow::after,
+.btn1.color-yellow::before {
+    border: 1px solid #ddc76d;
+}
+
+.btn1:hover::after,
+.btn1:hover::before {
+    transition: width 350ms ease-in-out;
+    width: 90%;
+    opacity: 1;
+}
+
+.btn1.color-yellow:hover {
+    color: #ddc76d;
+}
+
+
+/* button đăng nhập*/
+
+.btn-DangNhap button {
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    border: none;
+    background-color: #d6111e;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-DangNhap button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+
+/* avatar người dùng****/
+
+.avatar {
+    height: 35px;
+    width: auto;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 22px;
+    font-weight: bold;
+}
+
+.fa-user {
+    color: #000000;
+    font-size: 24px;
+}
+
+.menu a span {
+    color: #000000;
+}
+
+.avatar:hover {
+    background-color: #DDDD;
+}
+
+
+/* TEST */
+
+section {
+    height: 800px;
+}
+
+.btn-DangXuat button {
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    border: none;
+    background-color: #d6111e;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-DangXuat button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+
+/* icon tìm kiếm****/
+
+.btn-search {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.fa-search {
+    color: black;
+    font-size: 24px;
+}
+
+.btn-search {
+    height: 50px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -50px;
+}
+
+.btn-search input {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 0px;
+    transition: 0.8s ease;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-search .a {
+    color: black;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+}
+
+.btn-search:hover input {
+    width: 400px;
+    margin: 0 20px;
+}
+
+.btn-search input:focus {
+    width: 400px;
+    margin: 0 20px;
+}
+
+.btn-search input::placeholder {
+    color: #BBBBBB;
+}
+
+
+/* FOOTER CỦA LAYOUT*/
+
+footer {
+    position: relative;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #ffffff;
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/footer.jpg);
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.taskbar-footer {
+    margin: 15px 0px 15px 0px;
+}
+
+.txt-footer {
+    margin-right: 10px;
+}
+
+.fa-arrow-up {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.DoiTacLienKet {
+    margin-bottom: 15px;
+}
+
+.appStore {
+    border-radius: 10px;
+    border: #ffffff solid 1px;
+    margin-right: 10px;
+}
+
+.googlePlay {
+    height: 69px;
+    border-radius: 10px;
+    border: #ffffff solid 1px;
+}
+
+.info-footer {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txt-info {
+    margin: 10px 0;
+}
+
+.icon-footer {
+    display: flex;
+}
+
+.border-icon-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    height: 45px;
+    width: 45px;
+    border: #ffffff solid 2px;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+
+/* style cho phần header mà khi thu nhỏ màn hình sẽ hiển thị ra*/
+
+.menu-media {
+    display: none;
+}
+
+@media(max-width:980px) {
+    .menu {
+        display: none;
+    }
+    .menu-media img {
+        margin: 0px 15px;
+        height: 100px;
+        width: 120px;
+    }
+    .menu-media {
+        display: block;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 15%;
+        width: 100%;
+    }
+    .fa-bars {
+        position: absolute;
+        top: 30px;
+        right: 180px;
+        /* margin:30px 200px 0 0; */
+        font-size: 40px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .menu-media .tab-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 90px;
+        right: -60px;
+        margin-right: 200px;
+        width: 270px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .tab-menu li {
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:1200px) {
+    .btn-DangNhap {
+        display: none;
+    }
+    .avatar {
+        display: none;
+    }
+    .btn-search {
+        display: none;
+    }
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+}
+.dropdown-menu {
+    background-color: #494845;
+}
+.dropdown-item:hover {
+    background-color: #494845;
+}
+section {
+    position: relative;
+    height:auto;
+}

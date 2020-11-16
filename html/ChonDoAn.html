@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rạp Phim</title>
+    <!--font family-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!--font awesome icon-->
+    <script src="https://kit.fontawesome.com/a858033a2a.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--các file css tự định nghĩa-->
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/ChonDoAn.css">
+    <!--Thêm jquery và bắt sư kiện cho slide-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container-header" id="header-scroll">
+            <div class="menu container">
+                <img src="../img/—Pngtree—cinema creative_848148.png" alt="">
+                <ul class="tab-menu">
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Phim</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimdangchieu.html">Phim Đang Chiếu</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimsapchieu.html">Phim Sắp Chiếu</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Rạp CGV</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonRap.html">Rạp Thường</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonRap.html">Rạp Đặc Biệt</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./RapSapRaMat.html">Rạp Sắp Ra Mắt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Thành Viên</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="#">Tài Khoản</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./quyenloitv.html">Quyền Lợi Thành Viên</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Cultureplex</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./Voucher.html">Quầy Online</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./Event_Group.html">Sự Kiện & Vé Nhóm</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonDoAn.html">Restaurant</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow"><a href="./TinTuc_Uudai.html">Tin Mới & Ưu Đãi</a></li>
+                    <li class="btn1 color-yellow"><a href="./GioHang.html">Vé Của Tôi</a></li>
+                    <li class="btn1 color-yellow"><a href="./KhuyenMai.html">Khuyễn mãi</a></li>
+                    <li class="btn1 color-yellow"><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown" >
+                        <i class="far fa-user text-white"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./login.html">Đăng Nhập</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./LichChieu.html">Đăng Xuất</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./logout.html">Đăng Ký</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="#">
+                            <div class="dropdown">
+                                <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown" onmouseenter="show();" onmouseover="close();">
+                                    Languages
+                                </button>
+                                <div class="dropdown-menu-languages">
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./login.html">Tiếng Việt</a>
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./LichChieu.html">Tiếng Anh</a>
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./logout.html">Tiếng Nhật</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>  
+                <div class="avatar">
+                    
+                </div>        
+            </div>
+        </div>
+    </header>
+
+
+
+    <section id="header">
+        <img src="../img/background-header.jpg" class="img-header" alt="">
+        <div class="book_TP">
+            <div class="thongtin_doAn">
+                CGV Vivo City | Phòng số 1 | Số ghế (120/120)
+            </div>
+            <div class="book_doAn">
+                <h2>CHỌN THỰC PHẨM</h2>
+            </div>
+            <div class="danhsach_doAn">
+                <div class="food_item">
+                    <img src="https://www.cgv.vn/media/concession/web/5dde3ce31ec9a_1574845667.png">
+                    <div class="info_food">
+                        <h4>HELLO KITTY</h4>
+                        <span>1 Ly nước nhân vật Hello Kitty ( ly có nước)<br/>
+                           <br/>
+                        <span>Giá: <b>169.000,00 đ </b></span>
+                        <div class="mua_food">
+                            <button>-</button>
+                                <div class="so_luongTP">0</div>
+                            <button>+</button>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="food_item">
+                    <img src="https://www.cgv.vn/media/concession/web/5dde3ce31ec9a_1574845667.png">
+                    <div class="info_food">
+                        <h4>HELLO KITTY</h4>
+                        <span>1 Ly nước nhân vật Hello Kitty ( ly có nước)<br/>
+                            <br/>
+                        <span>Giá: <b>169.000,00 đ </b></span>
+                        <div class="mua_food">
+                            <button>-</button>
+                                <div class="so_luongTP">0</div>
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food_item">
+                    <img src="https://www.cgv.vn/media/concession/web/5dde3ce31ec9a_1574845667.png">
+                    <div class="info_food">
+                        <h4>HELLO KITTY</h4>
+                        <span>1 Ly nước nhân vật Hello Kitty ( ly có nước)<br/>
+                            <br/>
+                        <span>Giá: <b>169.000,00 đ </b></span>
+                        <div class="mua_food">
+                            <button>-</button>
+                                <div class="so_luongTP">0</div>
+                            <button>+</button>
+                        </div>
+                    </div>  
+                </div>
+                <div class="food_item">
+                    <img src="https://www.cgv.vn/media/concession/web/5dde3ce31ec9a_1574845667.png">
+                    <div class="info_food">
+                        <h4>HELLO KITTY</h4>
+                        <span>1 Ly nước nhân vật Hello Kitty ( ly có nước)<br/>
+                             <br/>
+                        <span>Giá: <b>169.000,00 đ </b></span>
+                        <div class="mua_food">
+                            <button>-</button>
+                                <div class="so_luongTP">0</div>
+                            <button>+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="food_item">
+                    <img src="https://www.cgv.vn/media/concession/web/5dde3ce31ec9a_1574845667.png">
+                    <div class="info_food">
+                        <h4>HELLO KITTY</h4>
+                        <span>1 Ly nước nhân vật Hello Kitty ( ly có nước)<br/>
+                            <br/>
+                        <span>Giá: <b>169.000,00 đ </b></span>
+                        <div class="mua_food">
+                            <button>-</button>
+                                <div class="so_luongTP">0</div>
+                            <button>+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="food_item">
+                    <img src="https://www.cgv.vn/media/concession/web/5dde3ce31ec9a_1574845667.png">
+                    <div class="info_food">
+                        <h4>HELLO KITTY</h4>
+                        <span>1 Ly nước nhân vật Hello Kitty ( ly có nước)<br/>
+                              <br/>
+                        <span>Giá: <b>169.000,00 đ </b></span>
+                        <div class="mua_food">
+                            <button>-</button>
+                                <div class="so_luongTP">0</div>
+                            <button>+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="food_item">
+                    <img src="https://www.cgv.vn/media/concession/web/5dde3ce31ec9a_1574845667.png">
+                    <div class="info_food">
+                        <h4>HELLO KITTY</h4>
+                        <span>1 Ly nước nhân vật Hello Kitty ( ly có nước)<br/>
+                           <br/>
+                        <span>Giá: <b>169.000,00 đ </b></span>
+                        <div class="mua_food">
+                            <button>-</button>
+                                <div class="so_luongTP">0</div>
+                            <button>+</button>
+                        </div>
+                    </div>
+                    
+                </div><div class="food_item">
+                    <img src="https://www.cgv.vn/media/concession/web/5dde3ce31ec9a_1574845667.png">
+                    <div class="info_food">
+                        <h4>HELLO KITTY</h4>
+                        <span>1 Ly nước nhân vật Hello Kitty ( ly có nước)<br/>
+                        <br/>
+                        <span>Giá: <b>169.000,00 đ </b></span>
+                        <div class="mua_food">
+                            <button>-</button>
+                                <div class="so_luongTP">0</div>
+                            <button>+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="food_item">
+                    <img src="https://www.cgv.vn/media/concession/web/5dde3ce31ec9a_1574845667.png">
+                    <div class="info_food">
+                        <h4>HELLO KITTY</h4>
+                        <span>1 Ly nước nhân vật Hello Kitty ( ly có nước)<br/>
+                             <br/>
+                        <span>Giá: <b>169.000,00 đ </b></span>
+                        <div class="mua_food">
+                            <button>-</button>
+                                <div class="so_luongTP">0</div>
+                            <button>+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="food_item">
+                    <img src="https://www.cgv.vn/media/concession/web/5dde3ce31ec9a_1574845667.png">
+                    <div class="info_food">
+                        <h4>HELLO KITTY</h4>
+                        <span>1 Ly nước nhân vật Hello Kitty ( ly có nước)<br/>
+                            <br/>
+                        <span>Giá: <b>169.000,00 đ </b></span>
+                        <div class="mua_food">
+                            <button>-</button>
+                                <div class="so_luongTP">0</div>
+                            <button>+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="nut_xacnhan">
+                <button>XÁC NHẬN</button>
+            </div>
+           
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="taskbar-footer">
+            <a href="#" class="txt-footer">Chính sách</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Lịch chiếu</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Giá vé</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Liên hệ</a>
+            <a href="#header" ><i class="fas fa-arrow-up"></i></a>
+            
+        </div>
+        <div class="DoiTacLienKet">
+            <a href="#"><img src="../img/appstore.png" alt="" class="appStore"></a>
+            <a href="#"><img src="../img/googlePlay.jpg" alt="" class="googlePlay"></a>
+            
+        </div>
+        <div class="info-footer">
+            <p class="txt-info">Cơ quan chủ quản: BỘ VĂN HÓA, THỂ THAO VÀ DU LỊCH</p>
+            <p class="txt-info">Bản quyền thuộc Trung tâm Chiếu phim Quốc gia.</p>
+            <p class="txt-info">Giấy phép số: 224/GP- TTĐT ngày 31/8/2010 - Chịu trách nhiệm: Nguyễn Danh Dương – Giám đốc.</p>
+            <p class="txt-info">Địa chỉ: 87 Láng Hạ, Quận Ba Đình, Tp. Hà Nội - Điện thoại: 024.35141791</p>
+        </div>
+        <div class="icon-footer">
+            <div class="border-icon-footer">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="border-icon-footer">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="border-icon-footer">
+                <i class="fab fa-google-plus-g"></i>
+            </div>
+           
+        </div>
+    </footer>
+
+    <script src="../js/LichChieu.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rạp Phim</title>
+    <!--font family-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!--font awesome icon-->
+    <script src="https://kit.fontawesome.com/a858033a2a.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--các file css tự định nghĩa-->
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/ChonRap.css">
+    <link rel="stylesheet" href="../css/phim.css">
+    <!--Thêm jquery và bắt sư kiện cho slide-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../js/chonrap.js" type="text/javascript"></script>
+    <style>
+        .toggle-tabs {
+            border-bottom: 2px solid #241d1e;
+            border-top: 2px solid #241d1e;
+            float: left;
+            min-height: 78px;
+            padding: 12px 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        /* .toggle-tabs {
+            background: transparent;
+            border: medium none;
+            text-align: center;
+            display: block;
+            position: relative;
+        } */
+        .day {
+            border: 2px solid #fdfcf0;
+            border-radius: 5px;
+            color: #717171;
+            cursor: pointer;
+            height: 48px;
+            position: relative;
+            width: 77px;
+        }
+        .toggle-tabs .current {
+            background: none repeat scroll 0 0 #fff;
+            list-style: none;
+            display: list-item;
+            float:left;
+        }
+        .toggle-tabs li.current:first-child {
+            
+        }
+        .day > span {
+            color: #717171;
+            font-size: 11px;
+            left: 4px;
+            position: absolute;
+            top: 4px;
+        }
+        .day > em {
+            color: #717171;
+            font-size: 11px;
+            font-style: normal;
+            left: 4px;
+            position: absolute;
+            top: 20px;
+        }
+        .day > strong {
+            color: #717171;
+            font-size: 32px;
+            font-weight: normal;
+            left: 31px;
+            line-height: 32px;
+            position: absolute;
+            top: 8px;
+        }
+        .lichchieu {
+            margin-top: 20px;
+            border: 2px solid #fdfcf0;
+            border-radius: 5px;
+            font-size: large;
+            font-weight: 400;
+            border-color: #d6eaff;
+            width: 200px;
+            height: auto;
+            text-align: center;
+            background-color: #6aa7e9;
+        }
+        .toggle-tabs .active {
+            border: 2px solid #6aa7e9;
+            border-radius: 5px;
+        } 
+        .content {
+            display: block;
+            height:auto;
+            float: left;
+            width: 30%;
+        }
+        .film-right {
+            display: block;
+            height: auto;
+            float:left;
+            flex-grow: 1;
+            grid-template-columns: 1fr 1fr;
+            width: 65%;
+            margin-left: 50px;
+            padding: 20px;
+        }
+        .item{
+            float:left;
+            width: 100%;
+        }
+        .Gio-Chieu {
+        height: auto;
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .Gio-Chieu div {
+        background-color: #eaf0ce;
+        height: 40px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+    
+    .Gio-Chieu div:hover {
+        background-color: #a0eaf0;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-header" id="header-scroll">
+            <div class="menu container">
+                <img src="../img/—Pngtree—cinema creative_848148.png" alt="">
+                <ul class="tab-menu">
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Phim</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimdangchieu.html">Phim Đang Chiếu</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimsapchieu.html">Phim Sắp Chiếu</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Rạp CGV</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonRap.html">Rạp Thường</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonRap.html">Rạp Đặc Biệt</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./RapSapRaMat.html">Rạp Sắp Ra Mắt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Thành Viên</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="#">Tài Khoản</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./quyenloitv.html">Quyền Lợi Thành Viên</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Cultureplex</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./Voucher.html">Quầy Online</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./Event_Group.html">Sự Kiện & Vé Nhóm</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonDoAn.html">Restaurant</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow"><a href="./TinTuc_Uudai.html">Tin Mới & Ưu Đãi</a></li>
+                    <li class="btn1 color-yellow"><a href="./GioHang.html">Vé Của Tôi</a></li>
+                    <li class="btn1 color-yellow"><a href="./KhuyenMai.html">Khuyễn mãi</a></li>
+                    <li class="btn1 color-yellow"><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown" >
+                        <i class="far fa-user text-white"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./login.html">Đăng Nhập</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./LichChieu.html">Đăng Xuất</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./logout.html">Đăng Ký</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="#">
+                            <div class="dropdown">
+                                <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown" onmouseenter="show();" onmouseover="close();">
+                                    Languages
+                                </button>
+                                <div class="dropdown-menu-languages">
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./login.html">Tiếng Việt</a>
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./LichChieu.html">Tiếng Anh</a>
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./logout.html">Tiếng Nhật</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>  
+                <div class="avatar">
+                    
+                </div>        
+            </div>
+        </div>
+    </header>
+
+
+    <section id="header">
+        <div class="container">
+            <div class="LichChieuTheoRap tab-content">
+                <h1>Chọn rạp chiếu</h1>
+                <div class="container-khuvuc">
+                    <select class="browser-default custom-select" id="sl_kv" onchange="showlistkv();">
+                        <option selected>Chọn Khu Vực</option>
+                        <option value="1">Hà Nội</option>
+                        <option value="2">TP.Hồ Chí Minh</option>
+                        <option value="3">TP.Hải Phòng</option>
+                        <option value="4">TP.Đà Nẵng</option>
+                        <option value="5">TP.Cần Thơ</option>
+                    </select>
+                </div>
+                <div class="container-rap">
+                    <select class="browser-default custom-select" id="sl_rap" onchange="showlistfilm();">
+                        <option selected>Chọn Rạp</option>
+                        <option value="1">Hùng Vương plaza</option>
+                        <option value="2">Vivo City</option>
+                        <option value="3">Cresent Mall</option>
+                        <option value="4">Pearl Plaza</option>
+                        <option value="5">Pandora City</option>
+                    </select>
+                </div>
+                
+                <div class="menu_phim" id="listfilm">
+                    <div class="container-LichNgay">
+                        <div class="lichchieu"><span>Lịch Chiếu</span></div>
+                        <ul class="toggle-tabs">
+                            <li class="current active">
+                                <div class="day">
+                                    <span>11</span>
+                                    <em>Sep</em>
+                                    <strong>16</strong>
+                                </div>
+    
+                            </li>
+                            <li class="current">
+                                <div class="day">
+                                    <span>11</span>
+                                    <em>Sep</em>
+                                    <strong>16</strong>
+                                </div>
+                            </li>
+                            <li class="current">
+                                <div class="day">
+                                    <span>11</span>
+                                    <em>Sep</em>
+                                    <strong>16</strong>
+                                </div>
+                            </li>
+                            <li class="current">
+                                <div class="day">
+                                    <span>11</span>
+                                    <em>Sep</em>
+                                    <strong>16</strong>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab_content">
+                        <div class="item">
+                            <div class="content">
+                                <img src="https://chieuphimquocgia.com.vn/Content/Images/0014877_0.jpeg">
+                                <div class="overlay">
+                                    <div class="text">
+                                        <h6><b>Ác nữ (2D) - C18</b></h6><br>
+                                        <p>Thể loại: Kinh dị<br>
+                                        Khởi chiếu: 11/09/2020</p><br>
+                                        <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                        <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="film-right">
+                                <div class="Gio-Chieu">
+                                        <div>10:00</div>
+                                        <div>12:05</div>
+                                        <div >13:00</div>
+                                        <div >14:10</div>
+                                        <div >14:30</div>
+                                        <div >16:00</div>
+                                        <div >18:00</div>
+                                        <div >20:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <img src="https://chieuphimquocgia.com.vn/Content/Images/0014389_0.jpeg">
+                                <div class="overlay">
+                                    <div class="text">
+                                        <h6><b>Siêu công phi đẳng MAVERICK(2D)</b></h6><br>
+                                        <p>Thể loại: Hành động <br>
+                                        Khởi chiếu: 23/12/2020</p><br>
+                                        <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                        <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="film-right">
+                                <div class="Gio-Chieu">
+                                        <div>10:00</div>
+                                        <div>12:05</div>
+                                        <div >13:00</div>
+                                        <div >14:10</div>
+                                        <div >14:30</div>
+                                        <div >16:00</div>
+                                        <div >18:00</div>
+                                        <div >20:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <img src="https://chieuphimquocgia.com.vn/Content/Images/0014399_0.jpeg">
+                                <div class="overlay">
+                                    <div class="text">
+                                        <h6><b>Góa phụ đen(2D)</b></h6><br>
+                                        <p>Thể loại: Hành động <br>
+                                        Khởi chiếu: 06/11/2020</p><br>
+                                        <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                        <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="film-right">
+                                <div class="Gio-Chieu">
+                                        <div>10:00</div>
+                                        <div>12:05</div>
+                                        <div >13:00</div>
+                                        <div >14:10</div>
+                                        <div >14:30</div>
+                                        <div >16:00</div>
+                                        <div >18:00</div>
+                                        <div >20:00</div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+
+
+
+    <footer>
+        <div class="taskbar-footer">
+            <a href="#" class="txt-footer">Chính sách</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Lịch chiếu</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Giá vé</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Liên hệ</a>
+            <a href="#header" ><i class="fas fa-arrow-up"></i></a>
+            
+        </div>
+        <div class="DoiTacLienKet">
+            <a href="#"><img src="../img/appstore.png" alt="" class="appStore"></a>
+            <a href="#"><img src="../img/googlePlay.jpg" alt="" class="googlePlay"></a>
+            
+        </div>
+        <div class="info-footer">
+            <p class="txt-info">Cơ quan chủ quản: BỘ VĂN HÓA, THỂ THAO VÀ DU LỊCH</p>
+            <p class="txt-info">Bản quyền thuộc Trung tâm Chiếu phim Quốc gia.</p>
+            <p class="txt-info">Giấy phép số: 224/GP- TTĐT ngày 31/8/2010 - Chịu trách nhiệm: Nguyễn Danh Dương – Giám đốc.</p>
+            <p class="txt-info">Địa chỉ: 87 Láng Hạ, Quận Ba Đình, Tp. Hà Nội - Điện thoại: 024.35141791</p>
+        </div>
+        <div class="icon-footer">
+            <div class="border-icon-footer">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="border-icon-footer">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="border-icon-footer">
+                <i class="fab fa-google-plus-g"></i>
+            </div>
+           
+        </div>
+    </footer>
+
+    <script src="../js/LichChieu.js" type="text/javascript"></script>
+    <script src="../js/phim.js" type="text/javascript"></script>
+    
+</body>
+</html>

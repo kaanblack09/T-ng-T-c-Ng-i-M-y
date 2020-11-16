@@ -1,0 +1,120 @@
+.book_ve {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.thongtin_ve {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.book_ghe {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.img-header {
+    height: 800px;
+    width: 100%;
+}
+
+section {
+    height: 1500px;
+    background-color: #DDDD;
+}
+
+.icon_list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.icon_dangchon {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.icon_dadat {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+}
+
+.icon_trong {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+span {
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.phong_ve {
+    margin: 0 auto;
+    width: 800px;
+    height: auto;
+    background-color: #FFFFCC;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screen {
+    margin-top: 10px;
+    width: 200px;
+    height: 20px;
+    background-color: #33CC66;
+    text-align: center;
+}
+
+.ghe {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.so_ghe {
+    background-color: #99FF99;
+    display: flex;
+    margin-left: 10px;
+}
+
+.so_ghe .hang {
+    padding: 1px;
+}
+
+.gheso {
+    background-color: white;
+    width: 30px;
+    height: 24px;
+    border: black solid 1px;
+    text-align: center;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.hang_ghephu {
+    color: #FFFFCC;
+}
+
+.nut_xacnhan {
+    margin-top: 20px;
+    margin-left: 800px;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color: #d6111e;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}

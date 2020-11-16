@@ -1,0 +1,88 @@
+.book_TP {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.thongtin_doAn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.book_doAn {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.danhsach_doAn {
+    margin: 0 auto;
+    width: 800px;
+    height: 1000px;
+    background-color: #FFFFCC;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-header {
+    height: 800px;
+    width: 100%;
+}
+
+section {
+    height: 2050px;
+    background-color: #DDDD;
+}
+
+.food_item {
+    margin: 0 auto;
+    display: flex;
+    width: 400px;
+    height: 200px;
+}
+
+.food_item img {
+    height: 150px;
+    width: 150px;
+}
+
+.mua_food {
+    display: flex;
+    margin-top: 5px;
+}
+
+.mua_food button {
+    height: 30px;
+    width: 20px;
+    font-size: 15px;
+    border: none;
+    background-color: #d6111e;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.so_luongTP {
+    width: 30px;
+    height: 30px;
+    background-color: #DDDDDD;
+    text-align: center;
+    line-height: 30px;
+}
+
+.nut_xacnhan {
+    margin-top: 20px;
+    margin-left: 800px;
+}
+
+.nut_xacnhan button {
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color: #d6111e;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}

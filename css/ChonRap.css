@@ -1,0 +1,40 @@
+.ChiTietRap {
+    margin-left: 90px;
+}
+
+.container-LichNgay {
+    margin-bottom: 30px;
+}
+
+.container-Rap {
+    border-bottom: solid 1px #DDDD;
+}
+
+.gio_chieu {
+    margin-left: 100px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+}
+
+.gio_chieu div {
+    background-color: #ffffff;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gio_chieu div:hover {
+    background-color: #d6111e;
+}
+.container-khuvuc {
+    margin-bottom: 20px;
+}
+section {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}

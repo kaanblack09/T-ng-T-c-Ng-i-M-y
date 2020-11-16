@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rạp Phim</title>
+    <!--font family-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!--font awesome icon-->
+    <script src="https://kit.fontawesome.com/a858033a2a.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--các file css tự định nghĩa-->
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/LichChieu.css">
+    <link rel="stylesheet" href="../css/lightslider.css">
+    <!--Thêm jquery và bắt sư kiện cho slide-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/JQuery3.3.1.js"></script>
+    <script type="text/javascript" src="../js/lightslider.js"></script>
+    
+    <style>
+        .dropdown-menu-languages {
+            display: none;
+        }
+        .dropdown-menu-languages a{
+            display: block;
+        }
+    </style>
+    <script>
+        function show()
+        {
+            document.querySelector(".dropdown-menu-languages").style.display = "block";
+        }
+        function close()
+        {
+            document.querySelector(".dropdown-menu-languages").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container-header" id="header-scroll">
+            <div class="menu container">
+                <img src="../img/—Pngtree—cinema creative_848148.png" alt="">
+                <ul class="tab-menu">
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Phim</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimdangchieu.html">Phim Đang Chiếu</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimsapchieu.html">Phim Sắp Chiếu</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Rạp CGV</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonRap.html">Rạp Thường</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonRap.html">Rạp Đặc Biệt</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./RapSapRaMat.html">Rạp Sắp Ra Mắt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Thành Viên</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="#">Tài Khoản</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./quyenloitv.html">Quyền Lợi Thành Viên</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Cultureplex</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./Voucher.html">Quầy Online</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./Event_Group.html">Sự Kiện & Vé Nhóm</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonDoAn.html">Restaurant</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow"><a href="./TinTuc_Uudai.html">Tin Mới & Ưu Đãi</a></li>
+                    <li class="btn1 color-yellow"><a href="./GioHang.html">Vé Của Tôi</a></li>
+                    <li class="btn1 color-yellow"><a href="./KhuyenMai.html">Khuyễn mãi</a></li>
+                    <li class="btn1 color-yellow"><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown" >
+                        <i class="far fa-user text-white"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./login.html">Đăng Nhập</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./LichChieu.html">Đăng Xuất</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./logout.html">Đăng Ký</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="#">
+                            <div class="dropdown">
+                                <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown" onmouseenter="show();" onmouseover="close();">
+                                    Languages
+                                </button>
+                                <div class="dropdown-menu-languages">
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./login.html">Tiếng Việt</a>
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./LichChieu.html">Tiếng Anh</a>
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./logout.html">Tiếng Nhật</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>  
+                <div class="avatar">
+                    
+                </div>        
+            </div>
+        </div>
+    </header>
+    
+
+    <section id="header">
+        <img src="../img/background-header.jpg" class="img-header" alt="">
+        <div class="LuaChonLichChieu">
+            <div class="item-LuaChon" onclick="openTab(event , 1)" id="defautOpen">
+                <div class="icon-lichchieu">
+                    <i class="fas fa-film"></i>
+                </div>
+                <span>Lịch Chiếu theo phim</span>
+            </div>
+            <div  class="item-LuaChon" onclick="openTab(event , 2)">
+                <div class="icon-lichchieu">
+                    <i class="fas fa-hotel"></i>
+                </div>
+                <span>Lịch Chiếu theo rạp</span>
+            </div>
+            <div class="item-LuaChon" onclick="openTab(event , 3)" >
+                <div class="icon-lichchieu">
+                    <i class="far fa-clock"></i>
+                </div>
+                <span>Lịch Chiếu theo ngày</span>
+            </div>
+            
+        </div>
+        <div class="container">
+            <div class="tab-content LichChieuTheoPhim container ">
+                <h1>Lịch chiếu theo phim</h1>
+                <div class="slide">
+                
+                    <!--slider------------------->
+                    <ul id="autoWidth" class="cs-hidden">
+                    <!--1------------------------------>
+                        <li class="item-a">
+                            <!--slider-box-->
+                            <div class="box">
+                                <img class="box-img" src="../img/img-slide1.jpg" alt="">
+                                <div class="chi-tiet-phim">
+                                    <div class="box-dong1">
+                                        <div class="box-tuoi">16</div>
+                                        <div class="box-Ten">BTS: TÂM TƯ CẤT LỜI </div>
+                                    </div>
+                                    <div class="box-dong2">
+                                        <SPan class="box-time">94 phút  |   </SPan>
+                                        <span class="box-date">10/09/2020</span>
+                                    </div>
+                        
+                                </div>   
+                            
+                            </div>
+                        </li>
+                        <li class="item-a">
+                            <!--slider-box-->
+                            <div class="box">
+                                
+                                <img class="box-img" src="../img/img-slide2.jpg" alt="">
+                                <div class="chi-tiet-phim">
+                                    <div class="box-dong1">
+                                        <div class="box-tuoi">16</div>
+                                        <div class="box-Ten">BTS: TÂM TƯ CẤT LỜI </div>
+                                    </div>
+                                    <div class="box-dong2">
+                                        <SPan class="box-time">94 phút  |   </SPan>
+                                        <span class="box-date">10/09/2020</span>
+                                    </div>
+                        
+                                </div>   
+                            
+                            </div>
+                        </li>
+                        <li class="item-a">
+                            <!--slider-box-->
+                            <div class="box">
+                                
+                                <img class="box-img" src="../img/img-slide3.jpg" alt="">
+                                <div class="chi-tiet-phim">
+                                    <div class="box-dong1">
+                                        <div class="box-tuoi">16</div>
+                                        <div class="box-Ten">BTS: TÂM TƯ CẤT LỜI </div>
+                                    </div>
+                                    <div class="box-dong2">
+                                        <SPan class="box-time">94 phút  |   </SPan>
+                                        <span class="box-date">10/09/2020</span>
+                                    </div>
+                        
+                                </div>   
+                                
+                                
+                            
+                            </div>
+                        </li>
+                        <li class="item-a">
+                            <!--slider-box-->
+                            <div class="box">
+                                
+                                <img class="box-img" src="../img/img-slide4.jpg" alt="">
+                                <div class="chi-tiet-phim">
+                                    <div class="box-dong1">
+                                        <div class="box-tuoi">16</div>
+                                        <div class="box-Ten">BTS: TÂM TƯ CẤT LỜI </div>
+                                    </div>
+                                    <div class="box-dong2">
+                                        <SPan class="box-time">94 phút  |   </SPan>
+                                        <span class="box-date">10/09/2020</span>
+                                    </div>
+                        
+                                </div>   
+                                
+                                
+                            
+                            </div>
+                        </li>
+                        <li class="item-a">
+                            <!--slider-box-->
+                            <div class="box">
+        
+                                <img class="box-img" src="../img/img-slide5.jpg" alt="">
+                                <div class="chi-tiet-phim">
+                                    <div class="box-dong1">
+                                        <div class="box-tuoi">16</div>
+                                        <div class="box-Ten">BTS: TÂM TƯ CẤT LỜI </div>
+                                    </div>
+                                    <div class="box-dong2">
+                                        <SPan class="box-time">94 phút  |   </SPan>
+                                        <span class="box-date">10/09/2020</span>
+                                    </div>
+                        
+                                </div>   
+                            
+                                
+                            
+                            </div>
+                        </li>
+                        <li class="item-a">
+                            <!--slider-box-->
+                            <div class="box">
+                                
+                                <img class="box-img" src="../img/img-slide6.jpg" alt="">
+                                <div class="chi-tiet-phim">
+                                    <div class="box-dong1">
+                                        <div class="box-tuoi">16</div>
+                                        <div class="box-Ten">BTS: TÂM TƯ CẤT LỜI </div>
+                                    </div>
+                                    <div class="box-dong2">
+                                        <SPan class="box-time">94 phút  |   </SPan>
+                                        <span class="box-date">10/09/2020</span>
+                                    </div>
+                        
+                                </div>   
+                            
+                            
+                            
+                            </div>
+                        </li>
+                        <li class="item-a">
+                            <!--slider-box-->
+                            <div class="box">
+                            
+                                <img class="box-img" src="../img/img-slide7.jpg" alt="">
+                                <div class="chi-tiet-phim">
+                                    <div class="box-dong1">
+                                        <div class="box-tuoi">16</div>
+                                        <div class="box-Ten">BTS: TÂM TƯ CẤT LỜI </div>
+                                    </div>
+                                    <div class="box-dong2">
+                                        <SPan class="box-time">94 phút  |   </SPan>
+                                        <span class="box-date">10/09/2020</span>
+                                    </div>
+                        
+                                </div>   
+                            
+                            
+                            </div>
+                        </li>
+                        
+                    
+                
+                    
+                    </ul>
+                        
+                        
+                
+                
+                </div>
+            </div>
+            <div class="LichChieuTheoRap tab-content">
+                <h1>Lịch chiếu theo rạp</h1>
+                <div class="container-Rap">
+                    <div class="ChiTietRap">
+                        <h3>BHD star 3.2</h3>
+                        <span>Tang 5, Sieu Thi Vincom 3/2, 3C Duong 3/2, Quan 10,TP.HCM</span>
+                        <button>Chi Tiết</button>
+                    </div>
+                    <div class="ChiTietRap">
+                        <h3>BHD Star Bitexco</h3>
+                        <span>Tang 3 & 4, TTTM ICON 68, 2 Hai Trieu, Quan 1,TP.HCM</span>
+                        <button>Chi Tiết</button>
+                    </div>
+                    <div class="ChiTietRap">
+                        <h3>BHD star 3.2</h3>
+                        <span>Tang 5, Sieu Thi Vincom 3/2, 3C Duong 3/2, Quan 10,TP.HCM</span>
+                        <button>Chi Tiết</button>
+                    </div>
+                    <div class="ChiTietRap">
+                        <h3>BHD star 3.2</h3>
+                        <span>Tang 5, Sieu Thi Vincom 3/2, 3C Duong 3/2, Quan 10,TP.HCM</span>
+                        <button>Chi Tiết</button>
+                    </div>
+                    <div class="ChiTietRap">
+                        <h3>BHD star 3.2</h3>
+                        <span>Tang 5, Sieu Thi Vincom 3/2, 3C Duong 3/2, Quan 10,TP.HCM</span>
+                        <button>Chi Tiết</button>
+                    </div>
+                    <div class="ChiTietRap">
+                        <h3>BHD star 3.2</h3>
+                        <span>Tang 5, Sieu Thi Vincom 3/2, 3C Duong 3/2, Quan 10,TP.HCM</span>
+                        <button>Chi Tiết</button>
+                    </div>
+                    <div class="ChiTietRap">
+                        <h3>BHD star 3.2</h3>
+                        <span>Tang 5, Sieu Thi Vincom 3/2, 3C Duong 3/2, Quan 10,TP.HCM</span>
+                        <button>Chi Tiết</button>
+                    </div>
+                    <div class="ChiTietRap">
+                        <h3>BHD star 3.2</h3>
+                        <span>Tang 5, Sieu Thi Vincom 3/2, 3C Duong 3/2, Quan 10,TP.HCM</span>
+                        <button>Chi Tiết</button>
+                    </div>
+                    <div class="ChiTietRap">
+                        <h3>BHD star 3.2</h3>
+                        <span>Tang 5, Sieu Thi Vincom 3/2, 3C Duong 3/2, Quan 10,TP.HCM</span>
+                        <button>Chi Tiết</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="LichChieuTheoNgay tab-content">
+                <h1>Lịch chiếu theo ngày</h1>
+                <div class="container-LichNgay">
+                    <input type="date">
+                </div>
+                <div class="container-infoPhim">
+                    <img src="../img/img-slide6.jpg" alt="">
+                    <div class="info-Phim">
+                        <div class="name-info">Thảm họa thiên thạch</div>
+                        <div><span >Đạo diễn:</span> Alban Tryggve</div>
+                        <div>Diễn viên: Ric Roman Waugh</div>
+                        <div>Xuất xứ: Mỹ</div>
+                        <div><span>Đánh giá: 8.2 </span><i class="fas fa-star"></i></div>
+                        <div class="icon-infoPhim">
+                            <div><i class="fas fa-calendar-alt To-Do"></i> <span>15.09.2020</span></div>
+                            <div><i class="far fa-clock To-Do"></i> 120 phút</div>
+                            <div><i class="fas fa-film To-Do"></i> Phim viễn tưởng</div>
+                        </div>
+                        <div class="btn-MuaVe-Trailer">
+                            <div class="btn-Muave" ><a href="#">Xem trailer</a></div>
+                            <div class="btn-Trailer"><a href="#">Mua vé</a></div>
+                        </div>
+                    </div>
+                    <div class="Gio-Chieu">
+                        <div>09:20</div>
+                        <div>10:00</div>
+                        <div>12:05</div>
+                        <div>13:00</div>
+                        <div>14:10</div>
+                        <div>16:20</div>
+                        <div>18:25</div>
+                        <div>21:40</div>
+                        <div>22:30</div>
+                        
+                    </div>
+                </div>
+                <div class="container-infoPhim">
+                    <img src="../img/img-slide7.jpg" alt="">
+                    <div class="info-Phim">
+                        <div class="name-info">Thảm họa thiên thạch</div>
+                        <div><span >Đạo diễn:</span> Alban Tryggve</div>
+                        <div>Diễn viên: Ric Roman Waugh</div>
+                        <div>Xuất xứ: Mỹ</div>
+                        <div><span>Đánh giá: 8.2 </span><i class="fas fa-star"></i></div>
+                        <div class="icon-infoPhim">
+                            <div><i class="fas fa-calendar-alt To-Do"></i> <span>15.09.2020</span></div>
+                            <div><i class="far fa-clock To-Do"></i> 120 phút</div>
+                            <div><i class="fas fa-film To-Do"></i> Phim viễn tưởng</div>
+                        </div>
+                        <div class="btn-MuaVe-Trailer">
+                            <div class="btn-Muave" ><a href="#">Xem trailer</a></div>
+                            <div class="btn-Trailer"><a href="#">Mua vé</a></div>
+                        </div>
+                    </div>
+                    <div class="Gio-Chieu">
+                        <div>09:20</div>
+                        <div>10:00</div>
+                        <div>12:05</div>
+                        <div>13:00</div>
+                        <div>14:10</div>
+                        <div>16:20</div>
+                        <div>18:25</div>
+                        <div>21:40</div>
+                        <div>22:30</div>
+                        
+                    </div>
+                </div>
+                <div class="container-infoPhim">
+                    <img src="../img/img-slide5.jpg" alt="">
+                    <div class="info-Phim">
+                        <div class="name-info">Thảm họa thiên thạch</div>
+                        <div><span >Đạo diễn:</span> Alban Tryggve</div>
+                        <div>Diễn viên: Ric Roman Waugh</div>
+                        <div>Xuất xứ: Mỹ</div>
+                        <div><span>Đánh giá: 8.2 </span><i class="fas fa-star"></i></div>
+                        <div class="icon-infoPhim">
+                            <div><i class="fas fa-calendar-alt To-Do"></i> <span>15.09.2020</span></div>
+                            <div><i class="far fa-clock To-Do"></i> 120 phút</div>
+                            <div><i class="fas fa-film To-Do"></i> Phim viễn tưởng</div>
+                        </div>
+                        <div class="btn-MuaVe-Trailer">
+                            <div class="btn-Muave" ><a href="#">Xem trailer</a></div>
+                            <div class="btn-Trailer"><a href="#">Mua vé</a></div>
+                        </div>
+                    </div>
+                    <div class="Gio-Chieu">
+                        <div>09:20</div>
+                        <div>10:00</div>
+                        <div>12:05</div>
+                        <div>13:00</div>
+                        <div>14:10</div>
+                        <div>16:20</div>
+                        <div>18:25</div>
+                        <div>21:40</div>
+                        <div>22:30</div>
+                        
+                    </div>
+                </div>
+                <div class="container-infoPhim">
+                    <img src="../img/img-slide4.jpg" alt="">
+                    <div class="info-Phim">
+                        <div class="name-info">Thảm họa thiên thạch</div>
+                        <div><span >Đạo diễn:</span> Alban Tryggve</div>
+                        <div>Diễn viên: Ric Roman Waugh</div>
+                        <div>Xuất xứ: Mỹ</div>
+                        <div><span>Đánh giá: 8.2 </span><i class="fas fa-star"></i></div>
+                        <div class="icon-infoPhim">
+                            <div><i class="fas fa-calendar-alt To-Do"></i> <span>15.09.2020</span></div>
+                            <div><i class="far fa-clock To-Do"></i> 120 phút</div>
+                            <div><i class="fas fa-film To-Do"></i> Phim viễn tưởng</div>
+                        </div>
+                        <div class="btn-MuaVe-Trailer">
+                            <div class="btn-Muave" ><a href="#">Xem trailer</a></div>
+                            <div class="btn-Trailer"><a href="#">Mua vé</a></div>
+                        </div>
+                    </div>
+                    <div class="Gio-Chieu">
+                        <div>09:20</div>
+                        <div>10:00</div>
+                        <div>12:05</div>
+                        <div>13:00</div>
+                        <div>14:10</div>
+                        <div>16:20</div>
+                        <div>18:25</div>
+                        <div>21:40</div>
+                        <div>22:30</div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="PhimSapChieu ">
+            <h1>Phim sắp ra mắt tháng 12</h1>
+            <div class="container">
+                <img src="../img/phim-thang-12-.jpg" alt="">
+                <img src="../img/phim_20191129095037.jpg" alt="">
+                <img src="../img/phim-chieu-rap-thang-2-2019.jpg" alt="">
+            </div>
+            <button >Xem thêm...</button>
+        </div>
+        <h1>Khuyến mãi / Sự kiện</h1>
+        <div class="KhuyenMai-SuKien container">
+            
+            <div class="Khoi-slide">
+                <div class="slide active"><img src="../img/khuyenmai2.jpg "alt=""></div>
+                <div class="slide"><img src="../img/khuyenmai1.jpg" alt=""></div>
+                <div class="slide"><img src="../img/khuyenmai4.jpg" alt=""></div>
+            </div>
+            <div class="Nut-slide">
+                <span id="btn-prev"><i class="fas fa-chevron-left nut-trai" ></i></span>
+                <span   id="btn-next"><i class="fas fa-chevron-right nut-phai"></i></span>
+            </div>
+            <ul>
+                <li class="nut-active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+            
+        </div>
+    </section>
+    
+    <footer>
+        <div class="taskbar-footer">
+            <a href="#" class="txt-footer">Chính sách</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Lịch chiếu</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Giá vé</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Liên hệ</a>
+            <a href="#header" ><i class="fas fa-arrow-up"></i></a>
+            
+        </div>
+        <div class="DoiTacLienKet">
+            <a href="#"><img src="../img/appstore.png" alt="" class="appStore"></a>
+            <a href="#"><img src="../img/googlePlay.jpg" alt="" class="googlePlay"></a>
+            
+        </div>
+        <div class="info-footer">
+            <p class="txt-info">Cơ quan chủ quản: BỘ VĂN HÓA, THỂ THAO VÀ DU LỊCH</p>
+            <p class="txt-info">Bản quyền thuộc Trung tâm Chiếu phim Quốc gia.</p>
+            <p class="txt-info">Giấy phép số: 224/GP- TTĐT ngày 31/8/2010 - Chịu trách nhiệm: Nguyễn Danh Dương – Giám đốc.</p>
+            <p class="txt-info">Địa chỉ: 87 Láng Hạ, Quận Ba Đình, Tp. Hà Nội - Điện thoại: 024.35141791</p>
+        </div>
+        <div class="icon-footer">
+            <div class="border-icon-footer">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="border-icon-footer">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="border-icon-footer">
+                <i class="fab fa-google-plus-g"></i>
+            </div>
+           
+        </div>
+    </footer>
+    <script src="../js/LichChieu.js" type="text/javascript"></script>
+    <script  src="../js/script-slide.js" type="text/javascript"></script>
+    <script  src="../js/layout.js" type="text/javascript"></script>
+    <script >
+        
+    </script>
+</body>
+</html>

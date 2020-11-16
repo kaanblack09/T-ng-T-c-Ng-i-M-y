@@ -1,0 +1,91 @@
+.gio_hang {
+    height: auto;
+    margin-top: 150px;
+}
+
+.gio_hang h2 {
+    text-align: center;
+}
+
+.gio_hang .container {
+    margin: 30px auto;
+    padding: 0;
+}
+
+
+/* phan tieu de */
+
+.gio_hang .container table thead {
+    background-color: orange;
+    color: white;
+}
+
+.gio_hang .container table thead tr {
+    height: 40px;
+}
+
+.gio_hang .container table thead tr th {
+    padding-left: 10px;
+}
+
+
+/* phan than */
+
+.gio_hang .container table tbody {
+    border: 1px solid #DDDDDD;
+}
+
+.gio_hang .container table tbody tr {}
+
+.gio_hang .container table tbody tr td {
+    padding: 5px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.gio_hang .container table tbody tr .thanh_tien {
+    text-align: center;
+}
+
+.gio_hang .container table tbody tr td .row .anh_sp img {
+    width: 150px;
+    height: 200px;
+    margin-left: 10px;
+}
+
+.gio_hang .container table tbody tr td input {
+    width: 80px;
+}
+
+.gio_hang .container table tbody tr td button {
+    width: 40px;
+}
+
+.gio_hang .container table tbody tr:hover {
+    background-color: #DDDDDD;
+}
+
+
+/* phan duoi cung */
+
+.gio_hang .container table tfoot {
+    border: 1px solid #DDDDDD;
+}
+
+.gio_hang .container table tfoot tr {
+    height: 80px;
+}
+
+.gio_hang .container table tfoot tr .tong_tien {
+    text-align: center;
+}
+
+.gio_hang .container table tfoot tr .mua_hang {
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.gio_hang .container table tfoot tr .thanh_toan {
+    cursor: pointer;
+}

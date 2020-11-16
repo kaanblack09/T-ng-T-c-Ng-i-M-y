@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rạp Phim</title>
+    <!--font family-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!--font awesome icon-->
+    <script src="https://kit.fontawesome.com/a858033a2a.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--các file css tự định nghĩa-->
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/phim.css">
+    <!--Thêm jquery và bắt sư kiện cho slide-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/JQuery3.3.1.js"></script>
+    <style>
+        a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="container-header" id="header-scroll">
+            <div class="menu container">
+                <img src="../img/—Pngtree—cinema creative_848148.png" alt="">
+                <ul class="tab-menu">
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Phim</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimdangchieu.html">Phim Đang Chiếu</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimsapchieu.html">Phim Sắp Chiếu</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Rạp CGV</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonRap.html">Rạp Thường</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonRap.html">Rạp Đặc Biệt</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./RapSapRaMat.html">Rạp Sắp Ra Mắt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Thành Viên</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="#">Tài Khoản</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./quyenloitv.html">Quyền Lợi Thành Viên</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Cultureplex</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./Voucher.html">Quầy Online</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./Event_Group.html">Sự Kiện & Vé Nhóm</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonDoAn.html">Restaurant</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow"><a href="./TinTuc_Uudai.html">Tin Mới & Ưu Đãi</a></li>
+                    <li class="btn1 color-yellow"><a href="./GioHang.html">Vé Của Tôi</a></li>
+                    <li class="btn1 color-yellow"><a href="./KhuyenMai.html">Khuyễn mãi</a></li>
+                    <li class="btn1 color-yellow"><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown" >
+                        <i class="far fa-user text-white"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./login.html">Đăng Nhập</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./LichChieu.html">Đăng Xuất</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./logout.html">Đăng Ký</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="#">
+                            <div class="dropdown">
+                                <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown" onmouseenter="show();" onmouseover="close();">
+                                    Languages
+                                </button>
+                                <div class="dropdown-menu-languages">
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./login.html">Tiếng Việt</a>
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./LichChieu.html">Tiếng Anh</a>
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./logout.html">Tiếng Nhật</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>  
+                <div class="avatar">
+                    
+                </div>        
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="menu_phim">
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="../img/slidephim1.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="../img/slidephim2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="../img/slidephim3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="../img/slidephim4.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="../img/slidephim5.jpg" style="width:100%">
+                </div>
+            
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                <div class="nut-dot">
+                    <span class="dot active" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div> 
+            <div class="tab_content">
+                <div class="row">
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014877_0.jpeg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>Ác nữ (2D) - C18</b></h6><br>
+                                    <p>Thể loại: Kinh dị<br>
+                                    Khởi chiếu: 11/09/2020</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014389_0.jpeg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>Siêu công phi đẳng MAVERICK(2D)</b></h6><br>
+                                    <p>Thể loại: Hành động <br>
+                                    Khởi chiếu: 23/12/2020</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014399_0.jpeg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>Góa phụ đen(2D)</b></h6><br>
+                                    <p>Thể loại: Hành động <br>
+                                    Khởi chiếu: 06/11/2020</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014398_0.png">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>Wonder woman 1984(2D)</b></h6><br>
+                                    <p>Thể loại: Hành động <br>
+                                    Khởi chiếu: 02/11/2020</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014397_0.jpeg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>The King's man: Khởi nguồn(2D)</b></h6><br>
+                                    <p>Thể loại: Hành động <br>
+                                    Khởi chiếu: 18/10/2020</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014853_0.jpeg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>Song song(2D)</b></h6><br>
+                                    <p>Thể loại: Tâm lý, tình cảm <br>
+                                    Khởi chiếu: 25/11/2020</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014765_0.jpeg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>Soul(2D)</b></h6><br>
+                                    <p>Thể loại: Phiêu lưu <br>
+                                    Khởi chiếu: 04/12/2020</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014805_0.jpeg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>Gia đình chân to phiêu lưu kí(2D)</b></h6><br>
+                                    <p>Thể loại: Hoạt hình <br>
+                                    Khởi chiếu: 25/12/2020</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014377_0.jpeg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>Không phải lúc chết(2D)</b></h6><br>
+                                    <p>Thể loại: Hành động <br>
+                                    Khởi chiếu: 12/11/2020</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014574_0.png">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>Vô diện sát nhân(2D)</b></h6><br>
+                                    <p>Thể loại: Kinh dị <br>
+                                    Khởi chiếu: 09/11/2020</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014763_0.jpeg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>Minions: Sự trỗi dậy của Gru(2D)</b></h6><br>
+                                    <p>Thể loại: Hoạt hình <br>
+                                    Khởi chiếu: 02/07/2021</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <img src="https://chieuphimquocgia.com.vn/Content/Images/0014555_0.jpeg">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h6><b>FAST & FURIOUS 9(2D)</b></h6><br>
+                                    <p>Thể loại: Hành động <br>
+                                    Khởi chiếu: 02/04/2021</p><br>
+                                    <a class="button" href="./ChonVe.html">"Đặt vé</a>
+                                    <a class="button" href="./ChiTietPhim.html">Chi Tiết</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="text-center">
+            <a href="#" class="previous round">&#8249;</a>
+            <a href="#" class="next round">&#8250;</a>
+            </div>
+        </div>    
+
+    </section>
+    
+    <footer>
+        <div class="taskbar-footer">
+            <a href="#" class="txt-footer">Chính sách</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Lịch chiếu</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Giá vé</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Liên hệ</a>
+            <a href="#header" ><i class="fas fa-arrow-up"></i></a>
+            
+        </div>
+        <div class="DoiTacLienKet">
+            <a href="#"><img src="../img/appstore.png" alt="" class="appStore"></a>
+            <a href="#"><img src="../img/googlePlay.jpg" alt="" class="googlePlay"></a>
+            
+        </div>
+        <div class="info-footer">
+            <p class="txt-info">Cơ quan chủ quản: BỘ VĂN HÓA, THỂ THAO VÀ DU LỊCH</p>
+            <p class="txt-info">Bản quyền thuộc Trung tâm Chiếu phim Quốc gia.</p>
+            <p class="txt-info">Giấy phép số: 224/GP- TTĐT ngày 31/8/2010 - Chịu trách nhiệm: Nguyễn Danh Dương – Giám đốc.</p>
+            <p class="txt-info">Địa chỉ: 87 Láng Hạ, Quận Ba Đình, Tp. Hà Nội - Điện thoại: 024.35141791</p>
+        </div>
+        <div class="icon-footer">
+            <div class="border-icon-footer">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="border-icon-footer">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="border-icon-footer">
+                <i class="fab fa-google-plus-g"></i>
+            </div>
+           
+        </div>
+    </footer>
+    <script  src="../js/layout.js" type="text/javascript"></script>
+     <script  src="../js/phim.js" type="text/javascript"></script>
+    <script >
+        
+    </script>
+</body>
+</html>

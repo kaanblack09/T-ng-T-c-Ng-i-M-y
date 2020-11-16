@@ -1,0 +1,99 @@
+.menu_contact {
+    height: auto;
+}
+
+.menu_contact .tab_contact img {
+    width: 100%;
+    height: 500px;
+}
+
+.menu_contact .tab_contact ul {
+    margin: 0;
+    padding: 70px 130px;
+}
+
+.menu_contact .tab_contact ul li {
+    list-style: none;
+    float: left;
+    text-align: center;
+    height: 220px;
+    width: 270px;
+}
+
+.menu_contact .tab_contact ul li img {
+    height: 32px;
+    width: 32px;
+    margin-bottom: 50px;
+}
+
+.menu_contact .map_contact {
+    margin: 0;
+    padding: 0;
+}
+
+.menu_contact .message_contact {
+    margin: 60px;
+    padding: 0;
+}
+
+.menu_contact .message_contact h3 {
+    text-align: center;
+}
+
+.menu_contact .message_contact ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu_contact .message_contact ul li {
+    list-style: none;
+    padding: 22px 190px;
+}
+
+.menu_contact .message_contact ul li input {
+    height: 60px;
+    border: 1px solid #CCC;
+    padding: 20px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.menu_contact .message_contact ul li textarea {
+    border: 1px solid #CCC;
+    padding: 20px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.menu_contact .message_contact .button {
+    border: solid 1px;
+    color: #fff;
+    padding: 10px 40px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 25px 548px;
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: red;
+}
+
+button:focus,
+.button:hover {
+    background-color: white;
+    color: black;
+}
+@media (max-width:700px) {
+    .menu_contact .message_contact input{
+        width: 100%;
+    }
+    .menu_contact .message_contact textarea{
+        width: 100%;
+    }
+    .menu_contact .message_contact ul li{
+        padding: 22px 40px;
+    }
+    .menu_contact .message_contact .button{
+        margin: 25px 180px;
+    }
+}
+

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rạp Phim</title>
+    <!--font family-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!--font awesome icon-->
+    <script src="https://kit.fontawesome.com/a858033a2a.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--các file css tự định nghĩa-->
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/food.css">
+    <!--Thêm jquery và bắt sư kiện cho slide-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/JQuery3.3.1.js"></script>
+    
+    
+</head>
+<body>
+    <header>
+        <div class="container-header" id="header-scroll">
+            <div class="menu container">
+                <img src="../img/—Pngtree—cinema creative_848148.png" alt="">
+                <ul class="tab-menu">
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Phim</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimdangchieu.html">Phim Đang Chiếu</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimsapchieu.html">Phim Sắp Chiếu</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Rạp CGV</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonRap.html">Rạp Thường</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonRap.html">Rạp Đặc Biệt</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./RapSapRaMat.html">Rạp Sắp Ra Mắt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Thành Viên</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="#">Tài Khoản</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./quyenloitv.html">Quyền Lợi Thành Viên</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow">
+                        <div class="dropdown">
+                            <a href="#">Cultureplex</a>
+                            <ul class="dropdown-menu">
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./Voucher.html">Quầy Online</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./Event_Group.html">Sự Kiện & Vé Nhóm</a></li>
+                                <li class='dropdown-item btn1 color-yellow'><a class="" href="./ChonDoAn.html">Restaurant</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="btn1 color-yellow"><a href="./TinTuc_Uudai.html">Tin Mới & Ưu Đãi</a></li>
+                    <li class="btn1 color-yellow"><a href="./GioHang.html">Vé Của Tôi</a></li>
+                    <li class="btn1 color-yellow"><a href="./KhuyenMai.html">Khuyễn mãi</a></li>
+                    <li class="btn1 color-yellow"><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown" >
+                        <i class="far fa-user text-white"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./login.html">Đăng Nhập</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./LichChieu.html">Đăng Xuất</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="./logout.html">Đăng Ký</a>
+                        <a class="dropdown-item btn1 color-yellow text-white" href="#">
+                            <div class="dropdown">
+                                <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown" onmouseenter="show();" onmouseover="close();">
+                                    Languages
+                                </button>
+                                <div class="dropdown-menu-languages">
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./login.html">Tiếng Việt</a>
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./LichChieu.html">Tiếng Anh</a>
+                                    <a class="dropdown-item-languages btn1 color-yellow text-white" href="./logout.html">Tiếng Nhật</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>  
+                <div class="avatar">
+                    
+                </div>        
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="menu_food">            
+            <div class="tab_food" >
+                <img src="../img/food1.jpg">
+                <ul id="food_load"> 
+                    <li><a href="#food1" class="food active" title="Bán chạy nhất" onclick="showTab(1)">Bán chạy nhất</a></li>
+                    <li><a href="#food2" class="food" title="FoodCombo" onclick="showTab(2)">FoodCombo</a></li>
+                </ul>
+            </div>
+            <div class="food_1">
+                <h2 id="food1">Bán chạy nhất</h2>   
+                <ul>
+                    <li>
+                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/cbe79cf5423c44fa88a4b472786a592c.jpg"> 
+                        <div class="text">
+                            <h3>SOLO COMBO</h3>
+                            <p>Hạn sử dụng sản phẩm | 3 tháng</p>
+                        </div>
+                        <div class="price">
+                            <del>100.000₫</del>
+                            <em>79.000</em><span>₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/cd42ac3c656042bc9509ee0c1b1e0910.jpg">
+                        <div class="text">
+                            <h3>COUPLE COMBO</h3>
+                            <p>Hạn sử dụng sản phẩm | 3 tháng</p>
+                        </div>
+                        <div class="price">
+                            <del>140.000₫</del>
+                            <em>105.000</em><span>₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/c32bb901512640cdaacdf505ea1b4dd4.jpg">
+                        <div class="text">
+                            <h3>Harmony Couple Combo</h3>
+                            <p>Hạn sử dụng sản phẩm | 3 tháng</p>
+                        </div>
+                        <div class="price">
+                            <del>140.000₫</del>
+                            <em>120.000</em><span>₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/9a0ae5a6be32433fbb0f80bc5a323176.jpg">
+                        <div class="text">    
+                            <h3>Harmony Plus Combo</h3>
+                            <p>Hạn sử dụng sản phẩm | 3 tháng</p>
+                        </div>
+                        <div class="price">
+                            <del>130.000₫</del>
+                            <em>120.000</em><span>₫</span>
+                        </div>
+                    </li>
+                </ul>         
+            </div>
+            <div class="food_2">
+                <h2 id="food2">FoodCombo</h2>
+                <ul>
+                    <li>
+                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/cbe79cf5423c44fa88a4b472786a592c.jpg"> 
+                        <div class="text"> 
+                            <h3>SOLO COMBO</h3>
+                            <p>Hạn sử dụng sản phẩm | 3 tháng</p>
+                        </div>
+                        <div class="price">
+                            <del>100.000₫</del>
+                            <em>79.000</em><span>₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/cd42ac3c656042bc9509ee0c1b1e0910.jpg">
+                        <div class="text">  
+                            <h3>COUPLE COMBO</h3>
+                            <p>Hạn sử dụng sản phẩm | 3 tháng</p>
+                        </div>
+                        <div class="price">
+                            <del>140.000₫</del>
+                            <em>105.000</em><span>₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/9caa226bf3b448a9a3fa237f0a5f32d2.jpg">
+                        <div class="text"> 
+                            <h3>PARTY COMBO</h3>
+                            <p>Hạn sử dụng sản phẩm | 3 tháng</p>
+                        </div>
+                        <div class="price">
+                            <del>300.000₫</del>
+                            <em>185.000</em><span>₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/c32bb901512640cdaacdf505ea1b4dd4.jpg">
+                        <div class="text"> 
+                            <h3>Harmony Couple Combo</h3>
+                            <p>Hạn sử dụng sản phẩm | 3 tháng</p>
+                        </div>    
+                        <div class="price">
+                            <del>140.000₫</del>
+                            <em>120.000</em><span>₫</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://media.lottecinemavn.com/Media/WebAdmin/9a0ae5a6be32433fbb0f80bc5a323176.jpg">
+                        <div class="text">     
+                            <h3>Harmony Plus Combo</h3>
+                            <p>Hạn sử dụng sản phẩm | 3 tháng</p>
+                        </div>
+                        <div class="price">
+                            <del>130.000₫</del>
+                            <em>120.000</em><span>₫</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="taskbar-footer">
+            <a href="#" class="txt-footer">Chính sách</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Lịch chiếu</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Giá vé</a>
+            <span class="txt-footer">|</span>
+            <a href="#" class="txt-footer">Liên hệ</a>
+            <a href="#header" ><i class="fas fa-arrow-up"></i></a>
+            
+        </div>
+        <div class="DoiTacLienKet">
+            <a href="#"><img src="../img/appstore.png" alt="" class="appStore"></a>
+            <a href="#"><img src="../img/googlePlay.jpg" alt="" class="googlePlay"></a>
+            
+        </div>
+        <div class="info-footer">
+            <p class="txt-info">Cơ quan chủ quản: BỘ VĂN HÓA, THỂ THAO VÀ DU LỊCH</p>
+            <p class="txt-info">Bản quyền thuộc Trung tâm Chiếu phim Quốc gia.</p>
+            <p class="txt-info">Giấy phép số: 224/GP- TTĐT ngày 31/8/2010 - Chịu trách nhiệm: Nguyễn Danh Dương – Giám đốc.</p>
+            <p class="txt-info">Địa chỉ: 87 Láng Hạ, Quận Ba Đình, Tp. Hà Nội - Điện thoại: 024.35141791</p>
+        </div>
+        <div class="icon-footer">
+            <div class="border-icon-footer">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="border-icon-footer">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="border-icon-footer">
+                <i class="fab fa-google-plus-g"></i>
+            </div>
+           
+        </div>
+    </footer>
+    <script  src="../js/layout.js" type="text/javascript"></script>
+    <script  src="../js/food.js" type="text/javascript"></script>
+    <script >
+        
+    </script>
+</body>
+</html>

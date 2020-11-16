@@ -1,0 +1,430 @@
+        .img-header {
+        height: 800px;
+        width: 100%;
+    }
+    /* STYLE CHO PHẦN LỰA CHỌN LỊCH CHIẾU*/
+    
+    section {
+        background-color: rgb(244, 242, 233);
+    }
+    
+    .LuaChonLichChieu {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 50px 0;
+        padding-top: 50px;
+    }
+    
+    .item-LuaChon {
+        height: 80px;
+        width: 250px;
+        background-color: #ffffff;
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .icon-lichchieu {
+        height: 40px;
+        width: 40px;
+        background-color: #d6111e;
+        color: #ffffff;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+    
+    .item-LuaChon:hover .icon-lichchieu {
+        background-color: #000000;
+    }
+    /* STYLE PHẦN HIỂN THỊ THÔNG TIN PHIM TRONG SLIDE*/
+    
+    .LichChieuTheoPhim {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .slide {
+        width: 100%;
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+    }
+    /* style cho component thông tin phim*/
+    
+    .box {
+        height: 360px;
+        width: 250px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+    }
+    
+    .item-a:hover {
+        transform: scale(1.03);
+        transition: ease 0.3s;
+    }
+    
+    .box-img {
+        height: 280px;
+        width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+    
+    .box-dong1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 8px;
+    }
+    
+    .box-tuoi {
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        background-color: #d6111e;
+        font-size: 16px;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box-Ten {
+        font-size: 16px;
+        margin-left: 5px;
+        color: #000000;
+        font-weight: 500;
+    }
+    
+    .box-dong2 {
+        text-align: center;
+        border-top: #3e4542a1 solid 1px;
+    }
+    /*STYLE CHO PHẦN THÔNG TIN CÁC RẠP CHIẾU*/
+    
+    .LichChieuTheoRap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container-Rap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .ChiTietRap {
+        height: 180px;
+        width: 300px;
+        background-color: #ffffff;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transition: transform 0.3s;
+        margin: 10px;
+    }
+    
+    .ChiTietRap:hover {
+        transform: translate(0, -10px);
+    }
+    
+    .ChiTietRap button:hover {
+        background-color: #000000;
+    }
+    
+    .ChiTietRap h3 {
+        margin: 5px 10px;
+    }
+    
+    .ChiTietRap span {
+        margin: 20px 10px 25px;
+    }
+    
+    .ChiTietRap button {
+        height: 40px;
+        border: none;
+        background-color: #d6111e;
+        color: #ffffff;
+        border-radius: 5px;
+    }
+    /* STYLE CHO PHẦN LỊCH CHIẾU PHIM THEO NGÀY*/
+    
+    .LichChieuTheoNgay h1 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .container-LichNgay input {
+        height: 40px;
+        width: 500px;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    .container-infoPhim img {
+        height: 380px;
+        width: 270px;
+        border-radius: 8px;
+    }
+    
+    .container-infoPhim {
+        margin: 20px 0;
+        display: flex;
+        border-bottom: #c8b7b7 solid 1px;
+        padding: 20px 0 60px;
+    }
+    
+    .container-infoPhim div {
+        margin-left: 10px;
+    }
+    
+    .name-info {
+        font-size: 48px;
+        font-weight: 900;
+    }
+    
+    .fa-star {
+        color: #efde0b;
+    }
+    
+    .icon-infoPhim {
+        display: flex;
+        margin: 50px 0;
+    }
+    
+    .icon-infoPhim div {
+        margin-right: 30px;
+    }
+    
+    .To-Do {
+        color: #d6111e;
+    }
+    
+    .btn-MuaVe-Trailer {
+        display: flex;
+        margin-top: 60px;
+    }
+    
+    .btn-Muave {
+        height: 66px;
+        width: 230px;
+        background-color: #d6111e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    
+    .btn-Trailer {
+        height: 66px;
+        width: 230px;
+        background-color: #171422;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    
+    .btn-Muave:hover,
+    .btn-Trailer:hover {
+        background-color: #ddc76d;
+        cursor: pointer;
+    }
+    
+    .btn-Muave:hover a,
+    .btn-Trailer:hover a {
+        color: #171422;
+    }
+    
+    .Gio-Chieu {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .Gio-Chieu div {
+        background-color: #ffffff;
+        height: 40px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .Gio-Chieu div:hover {
+        background-color: #d6111e;
+    }
+    /* STYLE  cho phần phim sắp chiếu*/
+    
+    .PhimSapChieu {
+        background-color: #282834;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .PhimSapChieu h1 {
+        color: #ffffff;
+        margin: 20px;
+    }
+    
+    .PhimSapChieu img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 3px;
+    }
+    
+    .PhimSapChieu button {
+        width: 500px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: #d6111e;
+        border: none;
+        color: #ffffff;
+        font-weight: 7s00;
+        margin: 10px 0 30px;
+    }
+    
+    .PhimSapChieu button:hover {
+        background-color: #ddc76d;
+        color: #171422;
+        cursor: pointer;
+    }
+    /* STYLE CHO PHẦN KHUYỄN MÃI, SỰ KIỆN*/
+    
+    .KhuyenMai-SuKien {
+        height: 500px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .Khoi-slide .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+    }
+    
+    .slide img {
+        height: 100%;
+    }
+    
+    .Khoi-slide .active {
+        visibility: visible;
+    }
+    
+    .Nut-slide {
+        font-size: 60px;
+        z-index: 10;
+        color: #ffffff;
+        opacity: 1;
+        height: 100%;
+        cursor: pointer;
+    }
+    
+    .nut-trai {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+    }
+    
+    .nut-phai {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+    }
+    
+    .KhuyenMai-SuKien ul {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        z-index: 10;
+        width: 100px;
+        display: flex;
+        cursor: pointer;
+    }
+    
+    .KhuyenMai-SuKien ul li {
+        height: 15px;
+        width: 15px;
+        list-style: none;
+        background-color: #ffffff;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    
+    .di-vao-ben-phai {
+        animation: di-vao-ben-phai 1s forwards;
+    }
+    
+    @-webkit-keyframes di-vao-ben-phai {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+    
+    .di-vao-ben-trai {
+        animation: di-vao-ben-trai 1s forwards;
+    }
+    
+    @-webkit-keyframes di-vao-ben-trai {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+    
+    .KhuyenMai-SuKien ul li.nut-active {
+        background-color: black;
+    }
+    
+    h1 {
+        margin: 30px;
+        text-align: center;
+    }
+    
+    @media(max-width:1200px) {
+        .Cac-Dien-Vien {
+            display: none;
+        }
+    }
+    /* Thêm phần chỉnh sửa ChonRap */
+    
+    section {
+        height: auto;
+    }
+    
+    .container .container-Rap {
+        padding: 10px 0px;
+    }

@@ -1,0 +1,218 @@
+.menu_food {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #f9f6ec;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_food .tab_food img {
+    height: 500px;
+    width: 100%;
+}
+
+.menu_food .tab_food ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.menu_food .tab_food ul li {
+    list-style: none;
+    float: left;
+}
+
+.menu_food .tab_food ul li a {
+    text-decoration: none;
+    display: block;
+    width: 482px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #DDDDDD;
+    background-color: #fff;
+}
+
+.menu_food .tab_food ul li a.active {
+    background: #cdc197;
+}
+
+.menu_food .food_1 {
+    margin-top: 40px;
+    margin-left: 195px;
+}
+
+.menu_food .food_2 {
+    height: 800px;
+    margin-left: 195px;
+}
+
+.menu_food .food_1 ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu_food .food_1 h2 {
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.menu_food .food_1 ul li {
+    list-style: none;
+    float: left;
+    margin-right: 15px;
+    display: block;
+    border: 1px solid #DDDDDD;
+    background-color: #fff;
+}
+
+.menu_food .food_1 ul li img {
+    height: 189px;
+    width: 228px;
+}
+
+.menu_food .food_1 ul li h3 {
+    font-size: 1.17em;
+}
+
+.menu_food .food_1 ul li .text {
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+.menu_food .food_1 ul li .text p {
+    color: #777777;
+}
+
+.menu_food .food_1 ul li .price {
+    height: 40px;
+    line-height: 40px;
+}
+
+.menu_food .food_1 ul li .price del {
+    font-size: 12px;
+    padding: 0 15px;
+    margin-right: 75px;
+    text-decoration: line-through;
+    font-weight: bold;
+    color: #777777;
+}
+
+.menu_food .food_1 ul li .price em {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'linlivertine';
+    font-style: normal;
+}
+
+.menu_food .food_1 ul li img {
+    cursor: pointer;
+}
+
+.menu_food .food_1 ul li:hover div.price {
+    background-color: #444444;
+    color: #fff;
+}
+
+.menu_food .food_1 ul li:hover div del {
+    background-color: #444444;
+    color: #fff;
+}
+
+.menu_food .padding_header {
+    height: 50px;
+}
+
+.menu_food .food_2 h2 {
+    margin-bottom: 25px;
+}
+
+.menu_food .food_2 ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu_food .food_2 ul li {
+    list-style: none;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 25px;
+    display: block;
+    border: 1px solid #DDDDDD;
+    background-color: #fff;
+}
+
+.menu_food .food_2 ul li img {
+    height: 189px;
+    width: 228px;
+}
+
+.menu_food .food_2 ul li h3 {
+    font-size: 1.17em;
+}
+
+.menu_food .food_2 ul li .text {
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+.menu_food .food_2 ul li .text p {
+    color: #777777;
+}
+
+.menu_food .food_2 ul li .price {
+    height: 40px;
+    line-height: 40px;
+}
+
+.menu_food .food_2 ul li .price del {
+    font-size: 12px;
+    padding: 0 15px;
+    margin-right: 75px;
+    text-decoration: line-through;
+    font-weight: bold;
+    color: #777777;
+}
+
+.menu_food .food_2 ul li .price em {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'linlivertine';
+    font-style: normal;
+}
+
+.menu_food .food_2 ul li img {
+    cursor: pointer;
+}
+
+.menu_food .food_2 ul li:hover div.price {
+    background-color: #444444;
+    color: #fff;
+}
+
+.menu_food .food_2 ul li:hover div del {
+    background-color: #444444;
+    color: #fff;
+}
+
+@media (max-width:700px) {
+    .menu_food {
+        height: auto;
+        width: 100%;
+    }
+    .menu_food .tab_food ul {
+        flex-direction: column;
+        margin-left: 60px;
+        align-items: center;
+    }
+}
+section {
+    height: auto;
+}
