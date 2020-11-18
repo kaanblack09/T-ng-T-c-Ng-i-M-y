@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!--các file css tự định nghĩa-->
     <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/ChonRap.css">
-    <link rel="stylesheet" href="../css/phim.css">
+    
     <!--Thêm jquery và bắt sư kiện cho slide-->
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="../js/chonrap.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/JQuery3.3.1.js"></script>
+    <link rel="stylesheet" href="../css/ChiTietPhim.css">
     <style>
         .toggle-tabs {
             border-bottom: 2px solid #241d1e;
@@ -92,47 +91,23 @@
             border: 2px solid #6aa7e9;
             border-radius: 5px;
         } 
-        .content {
-            display: block;
-            height:auto;
-            float: left;
-            width: 30%;
-        }
-        .film-right {
-            display: block;
-            height: auto;
-            float:left;
-            flex-grow: 1;
-            grid-template-columns: 1fr 1fr;
-            width: 65%;
-            margin-left: 50px;
-            padding: 20px;
-        }
-        .item{
-            float:left;
-            width: 100%;
-        }
-        .Gio-Chieu {
-        height: auto;
-        flex-grow: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .gio { 
+    background-color: #eaf0ce;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 30px;
     }
     
-    .Gio-Chieu div {
-        background-color: #eaf0ce;
-        height: 40px;
-        width: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 30px;
-    }
-    
-    .Gio-Chieu div:hover {
+    .gio:hover {
         background-color: #a0eaf0;
+    }
+    .box-lichchieu {
+        border-bottom: #000000;
     }
     </style>
 </head>
@@ -213,160 +188,130 @@
             </div>
         </div>
     </header>
-
-    <section id="header">
-        <div class="container">
-            <div class="LichChieuTheoRap tab-content">
-                <h1>Chọn rạp chiếu</h1>
-                <div class="container-khuvuc">
-                    <select class="browser-default custom-select" id="sl_kv" onchange="showlistkv();">
-                        <option selected>Chọn Khu Vực</option>
-                        <option value="1">Hà Nội</option>
-                        <option value="2">TP.Hồ Chí Minh</option>
-                        <option value="3">TP.Hải Phòng</option>
-                        <option value="4">TP.Đà Nẵng</option>
-                        <option value="5">TP.Cần Thơ</option>
-                    </select>
-                </div>
-                <div class="container-rap">
-                    <select class="browser-default custom-select" id="sl_rap" onchange="showlistfilm();">
-                        <option selected>Chọn Rạp</option>
-                        <option value="1">Hùng Vương plaza</option>
-                        <option value="2">Vivo City</option>
-                        <option value="3">Cresent Mall</option>
-                        <option value="4">Pearl Plaza</option>
-                        <option value="5">Pandora City</option>
-                    </select>
-                </div>
-                
-                <div class="menu_phim" id="listfilm">
-                    <div class="container-LichNgay">
-                        <div class="lichchieu"><span>Lịch Chiếu</span></div>
-                        <ul class="toggle-tabs">
-                            <li class="current active">
-                                <div class="day">
-                                    <span>11</span>
-                                    <em>Sep</em>
-                                    <strong>16</strong>
-                                </div>
     
-                            </li>
-                            <li class="current">
-                                <div class="day">
-                                    <span>11</span>
-                                    <em>Sep</em>
-                                    <strong>16</strong>
-                                </div>
-                            </li>
-                            <li class="current">
-                                <div class="day">
-                                    <span>11</span>
-                                    <em>Sep</em>
-                                    <strong>16</strong>
-                                </div>
-                            </li>
-                            <li class="current">
-                                <div class="day">
-                                    <span>11</span>
-                                    <em>Sep</em>
-                                    <strong>16</strong>
-                                </div>
-                            </li>
-                        </ul>
+    <section>
+        <div class="container">
+            <div class="container-infoPhim">
+                <div><img src="../img/img-slide6.jpg" alt=""></div>
+                <div class="info-Phim">
+                    <div class="name-info">Thảm họa thiên thạch</div>
+                    <div><span class="red">Đạo diễn:</span> Alban Tryggve</div>
+                    <div><span class="red">Diễn viên:</span> Ric Roman Waugh</div>
+                    <div><span class="red">Xuất xứ: </span> Mỹ</div>
+                    <div><span class="red">Đánh giá: </span> 8.2<i class="fas fa-star"></i></div>
+                    <div>
+                        <span class="red">Tóm tắt: </span>
+                        <p class="Tom-Tat">Một chùm sao chổi từ hệ mặt trời khác rơi xuống trái đất gây nên thảm họa 
+                        diệt vong cấp độ toàn cầu. Gia đình Garrity là một trong số ít được chọn bởi chính 
+                        phủ để vào trú ẩn trong hầm tận thế đặt tại Greenland. Nhưng không may, họ không lên 
+                        được máy bay và thất lạc nhau. Thế giới rơi vào hỗn loạn, xã hội tan vỡ, kéo theo con 
+                        người phải sống theo bản năng và vô lối. Cả gia đình vừa phải tìm lại nhau vừa sinh tồn vượt qua thảm họa.
+                        Cảnh thiên thạch tàn phá chưa được đầu tư nhiều.</p>
                     </div>
-                    <div class="tab_content">
-                        <div class="item">
-                            <div class="content">
-                                <img src="https://chieuphimquocgia.com.vn/Content/Images/0014877_0.jpeg">
-                                <div class="overlay">
-                                    <div class="text">
-                                        <h6><b>Ác nữ (2D) - C18</b></h6><br>
-                                        <p>Thể loại: Kinh dị<br>
-                                        Khởi chiếu: 11/09/2020</p><br>
-                                        <a class="button" href="./ChonVe.html">"Đặt vé</a>
-                                        <a class="button" href="./chitiet_lichchieu_phim.html"">Chi Tiết</a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="film-right">
-                                <div class="Gio-Chieu">
-                                        <div>10:00</div>
-                                        <div>12:05</div>
-                                        <div >13:00</div>
-                                        <div >14:10</div>
-                                        <div >14:30</div>
-                                        <div >16:00</div>
-                                        <div >18:00</div>
-                                        <div >20:00</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="content">
-                                <img src="https://chieuphimquocgia.com.vn/Content/Images/0014389_0.jpeg">
-                                <div class="overlay">
-                                    <div class="text">
-                                        <h6><b>Siêu công phi đẳng MAVERICK(2D)</b></h6><br>
-                                        <p>Thể loại: Hành động <br>
-                                        Khởi chiếu: 23/12/2020</p><br>
-                                        <a class="button" href="./ChonVe.html">"Đặt vé</a>
-                                        <a class="button" href="./chitiet_lichchieu_phim.html"">Chi Tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="film-right">
-                                <div class="Gio-Chieu">
-                                        <div>10:00</div>
-                                        <div>12:05</div>
-                                        <div >13:00</div>
-                                        <div >14:10</div>
-                                        <div >14:30</div>
-                                        <div >16:00</div>
-                                        <div >18:00</div>
-                                        <div >20:00</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="content">
-                                <img src="https://chieuphimquocgia.com.vn/Content/Images/0014399_0.jpeg">
-                                <div class="overlay">
-                                    <div class="text">
-                                        <h6><b>Góa phụ đen(2D)</b></h6><br>
-                                        <p>Thể loại: Hành động <br>
-                                        Khởi chiếu: 06/11/2020</p><br>
-                                        <a class="button" href="./ChonVe.html">"Đặt vé</a>
-                                        <a class="button" href="./chitiet_lichchieu_phim.html"">Chi Tiết</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="film-right">
-                                <div class="Gio-Chieu">
-                                        <div>10:00</div>
-                                        <div>12:05</div>
-                                        <div >13:00</div>
-                                        <div >14:10</div>
-                                        <div >14:30</div>
-                                        <div >16:00</div>
-                                        <div >18:00</div>
-                                        <div >20:00</div>
-                                </div>
-                            </div>
-                        </div>
-                            
+                    <div class="icon-infoPhim">
+                        <div><i class="fas fa-calendar-alt To-Do"></i> <span>15.09.2020</span></div>
+                        <div><i class="far fa-clock To-Do"></i> 120 phút</div>
+                        <div><i class="fas fa-film To-Do"></i> Phim viễn tưởng</div>
                     </div>
                     
                 </div>
             </div>
-            
+            <div class="box-lichchieu">
+                <div class="lichchieu"><span>Lịch Chiếu</span></div>
+                <ul class="toggle-tabs">
+                    <li class="current active">
+                        <div class="day">
+                            <span>11</span>
+                            <em>Sep</em>
+                            <strong>16</strong>
+                        </div>
+
+                    </li>
+                    <li class="current">
+                        <div class="day">
+                            <span>11</span>
+                            <em>Sep</em>
+                            <strong>16</strong>
+                        </div>
+                    </li>
+                    <li class="current">
+                        <div class="day">
+                            <span>11</span>
+                            <em>Sep</em>
+                            <strong>16</strong>
+                        </div>
+                    </li>
+                    <li class="current">
+                        <div class="day">
+                            <span>11</span>
+                            <em>Sep</em>
+                            <strong>16</strong>
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <div class="Gio-Chieu">
+                        <div class="row">
+                            <div class="col-sm gio">10:00</div>
+                            <div class="col-sm gio">12:05</div>
+                            <div class="col-sm gio">13:00</div>
+                            <div class="col-sm gio">14:10</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm gio">10:00</div>
+                            <div class="col-sm gio">12:05</div>
+                            <div class="col-sm gio">13:00</div>
+                            <div class="col-sm gio">14:10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="btn-MuaVe-Trailer">
+                    <div class="btn-Muave" ><a href="#">Xem trailer</a></div>
+                    <div class="btn-Trailer"><a href="#">Mua vé</a></div>
+                </div>
+                <div class="DS-Ten-DV">
+                    <h4>Diễn viên:</h4>
+                    <p>Mark Elliot (Taxi Driver), Rick Abelardo (Brother), Michhael Berton (Daddy),
+                     Daren Whissel (Stewe), Keegan Davis (Rob), Lorie Terman (Stefany), 
+                     Jasmine Brown (Elsa), Marie Ingram (Linda), Aysha Morton (Sindy),
+                      Christina Grant (Doctor Eve), Madeleine Garza (Carol)
+                    </p>
+                </div>
+            </div>
+            <div class="Trailer">
+                <h3>Official Trailer:</h3>
+                <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/XRm1P7oGpMQ" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+            </div>
+            <div class="container-comment">
+                <h3>1 Comment</h3>
+                <div class="comment">
+                    <div class="avatar-cmt"><i class="far fa-user"></i></div>
+                    <div class="NoiDung-cmt">
+                       <div>September 11, 2019 at 5:51 pm</div> 
+                       <div class="name-cmt">Phạm Trọng Linh</div>
+                       <p>Phim rất hay, kịch tính tới phút cuối</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Dang-cmt">
+                <h3> Bình Luận</h3>
+                <form action="" class="form-cmt">
+                    <p>Bình luận sẽ được đăng công khai</p>
+                    <input type="text" placeholder="Bình luận">
+                    <button>Đăng</button>
+                </form>
+            </div>
         </div>
-        
     </section>
-
-
-
-
+    
     <footer>
         <div class="taskbar-footer">
             <a href="#" class="txt-footer">Chính sách</a>
@@ -403,9 +348,9 @@
            
         </div>
     </footer>
-
-    <script src="../js/LichChieu.js" type="text/javascript"></script>
-    <script src="../js/phim.js" type="text/javascript"></script>
-    
+    <script  src="../js/layout.js" type="text/javascript"></script>
+    <script >
+        
+    </script>
 </body>
 </html>

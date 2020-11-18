@@ -389,3 +389,6 @@ section {
     position: relative;
     height:auto;
 }
+section {
+    min-height: 800px;
+}
