@@ -16,23 +16,23 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/JQuery3.3.1.js"></script>
     <style>
-        a {
+        a.btpn{
   text-decoration: none;
   display: inline-block;
   padding: 8px 16px;
 }
 
-a:hover {
+a.btpn:hover {
   background-color: #ddd;
   color: black;
 }
 
-.previous {
+.previous.btpn {
   background-color: #4CAF50;
   color: white;
 }
 
-.next {
+.next.btpn{
   background-color: #4CAF50;
   color: white;
 }
@@ -40,17 +40,17 @@ a:hover {
 .round {
   border-radius: 50%;
 }
-</style>
+    </style>
 </head>
 <body>
     <header>
         <div class="container-header" id="header-scroll">
             <div class="menu container">
-                <img src="../img/—Pngtree—cinema creative_848148.png" alt="">
+                <a href="#"><img src="../img/—Pngtree—cinema creative_848148.png" alt=""></a>
                 <ul class="tab-menu">
                     <li class="btn1 color-yellow">
                         <div class="dropdown">
-                            <a href="#">Phim</a>
+                            <a href="Home.html">Phim</a>
                             <ul class="dropdown-menu">
                                 <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimdangchieu.html">Phim Đang Chiếu</a></li>
                                 <li class='dropdown-item btn1 color-yellow'><a class="" href="./phimsapchieu.html">Phim Sắp Chiếu</a></li>
@@ -327,13 +327,12 @@ a:hover {
                 
             </div>
             <div class="text-center">
-            <a href="#" class="previous round">&#8249;</a>
-            <a href="#" class="next round">&#8250;</a>
+            <a href="#" id="prev" class="previous round btpn">&#8249;</a>
+            <a href="#" id="next" class="next round btpn">&#8250;</a>
             </div>
         </div>    
 
     </section>
-    
     <footer>
         <div class="taskbar-footer">
             <a href="#" class="txt-footer">Chính sách</a>
